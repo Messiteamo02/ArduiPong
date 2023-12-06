@@ -29,20 +29,19 @@ AiEsp32RotaryEncoder rotaryEncoderj2 = AiEsp32RotaryEncoder(ROTARY_ENCODERj2_A_P
 
 // VGA Device
 VGA3Bit vga;
-
 // Pelota
 float Pposx = 0;
 float Pposy = 0;
 float Pvelx = 2;
 float Pvely = 2;
 int Pradio = 5;
-
+//aceleracion 
+float a = 0.2;
 // Paletas
 float pal1posx = 0;
 float pal1posy = 0;
 float pal2posx = 0;
 float pal2posy = 0;
-
 // Puntaje inicial
 int Puntaje1 = 0;
 int Puntaje2 = 0;
@@ -51,7 +50,12 @@ int EstadoDelJuego = 0;
 // H = Alto
 float H = 10;
 // W = Ancho
-float W = 30;
+float W = 50;
+// C = Centro
+float C = W/2;
+
+int CantRev = 0;
+int d = CantRev/5;
 
 void setup() {
   vga.setFrameBufferCount(2);

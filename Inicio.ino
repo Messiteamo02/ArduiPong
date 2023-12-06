@@ -11,10 +11,9 @@ void Pantallainicio() {
   }
   vga.fillCircle(vga.xres / 2, vga.yres / 2, R, vga.RGB(0, 0, 0));//Circulo negro del medio
   vga.line(200, 300, 200, 0, vga.RGB(255, 255, 255));
-  if (rotaryEncoder.isEncoderButtonClicked()) {
-    rotary_onButtonClick();
-    R = R*2;
-    delay(1000);
-    EstadoDelJuego = 1;
+  if (rotaryEncoder.encoderChanged())
+  {
+   delay(1000);
+   EstadoDelJuego = 1;
   }
 }

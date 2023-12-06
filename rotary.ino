@@ -53,9 +53,9 @@ void IRAM_ATTR readEncoderISR()
     
 
     bool circleValues = false;
-    rotaryEncoder.setBoundaries(0+3, 290-20, circleValues); //minValue, maxValue, circleValues true|false (when max go to min and vice versa)
+    rotaryEncoder.setBoundaries(0+3, 290-40, circleValues); //minValue, maxValue, circleValues true|false (when max go to min and vice versa)
     //rotaryEncoder.disableAcceleration(); //acceleration is now enabled by default - disable if you dont need it
     //rotaryEncoder.setAcceleration(250); //or set the value - larger number = more accelearation; 0 or 1 means disabled acceleration
-    rotaryEncoderj2.setBoundaries(0+3, 290-20, circleValues); //minValue, maxValue, circleValues true|false (when max go to min and vice versa)
+    rotaryEncoderj2.setBoundaries(0+3, 290-40, circleValues); //minValue, maxValue, circleValues true|false (when max go to min and vice versa)
     //rotaryEncoderj2.disableAcceleration();
   }
